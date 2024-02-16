@@ -102,9 +102,16 @@ def data_source_list_initializer() -> DataSourceList:
     return DataSourceList(
         [
             HuggingFaceDataSource(
-                dataset_name="<fill-here>",
+                dataset_name="Francesco/road-traffic",
                 label_map={
-                    # class_id: "<fill-here>",
+                    0: "road-traffic",
+                    1: "bicycles",
+                    2: "buses",
+                    3: "crosswalks",
+                    4: "fire hydrants",
+                    5: "motorcycles",
+                    6: "traffic lights",
+                    7: "vehicles",
                 },
             )
         ]
