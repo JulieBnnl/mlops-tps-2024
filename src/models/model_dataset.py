@@ -98,6 +98,8 @@ class Dataset:
         )[0]
 
     def download(self, bucket_client: BucketClient, destination_root_path: str) -> None:
+        print(self.bucket_name)
+
         bucket_client.download_folder(
             bucket_name=self.bucket_name,
             folder_name=self.uuid,

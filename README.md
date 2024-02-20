@@ -2,7 +2,7 @@
 
 Welcome to the 2024 MLOps course repository at TPS. This project aims to teach you how to implement:
 
-- A comprehensive end-to-end MLOps pipeline. 
+- A comprehensive end-to-end MLOps pipeline.
 - Data lake management using MinIO.
 - Pipeline orchestration with ZenML.
 - Experiment tracking with MLFlow.
@@ -11,13 +11,14 @@ Welcome to the 2024 MLOps course repository at TPS. This project aims to teach y
 Please feel free to ask questions, as this project involves numerous skills that can sometimes be challenging to master.
 
 ## 1. Installation ⚙️
+
 ### A. Python
 
-For this project, we'll be using Python 3.11:  https://www.linuxcapable.com/how-to-install-python-3-11-on-ubuntu-linux/
+For this project, we'll be using Python 3.11: https://www.linuxcapable.com/how-to-install-python-3-11-on-ubuntu-linux/
 
 ### B. Poetry
 
-Install Poetry by following this guide:  https://medium.com/@mronakjain94/comprehensive-guide-to-installing-poetry-on-ubuntu-and-managing-python-projects-949b49ef4f76
+Install Poetry by following this guide: https://medium.com/@mronakjain94/comprehensive-guide-to-installing-poetry-on-ubuntu-and-managing-python-projects-949b49ef4f76
 
 Then, activate the Poetry environment:
 
@@ -56,10 +57,10 @@ Now, let's start the local stack. First, we need to create the `mlflow` schema f
 #path/to/this/project
 
 # Start the mysql container
-docker-compose up mysql-db
+sudo docker compose up mysql-db
 
 # Connect to it
-docker exec -ti mlops-tps-2024-mysql-db-1 /bin/bash
+sudo docker exec -ti mlops-tps-2024-mysql-db-1 /bin/bash
 mysql -u root -p
 
 # Type your root password
@@ -80,10 +81,10 @@ You can now run the complete stack:
 
 ```bash
 #path/to/this/project
-docker-compose up
+sudo docker compose up
 
 # Setup your ZenML stack
-sh stack/setup-local-stack.sh
+bash stack/setup-local-stack.sh
 ```
 
 Don't forget to create an `mlflow` bucket on MinIO.

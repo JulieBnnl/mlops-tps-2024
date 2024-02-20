@@ -1,5 +1,3 @@
-from mlflow.server.auth.client import AuthServiceClient
-
 # The script needs the following environment variables:
 # export MLFLOW_TRACKING_USERNAME=username
 # export MLFLOW_TRACKING_PASSWORD=password
